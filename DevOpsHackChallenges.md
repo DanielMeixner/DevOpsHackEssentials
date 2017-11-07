@@ -1,18 +1,29 @@
-# DevOps Challenge \#1 - VSTS Project Setup #
+# DevOps Challenge \#0 - VSTS Account Setup #
 In this challenge you will create a VSTS account, invite users, set up a project and create a team with your colleagues. If you need help check out the [hints for this challenge](/FirstSteps/FirstSteps.md).
+If a VSTS account and an Azure account has already been set up for you, skip the corresponding steps.
 
+## What is VSTS? ##
+Think of VSTS as an integrated solution to support you throughout development and deployment of software. It covers a lot of tasks which typically can be found in distributed tools in a central place which can make your live easier but which also allows easy combination of artifacts and data and simplifies maintainance.
+* A VSTS Account is reflected by an URL like mycompany.visualstudio.com. For huge companies it can make sense to have multiple VSTS accounts. Often a single VSTS Account is sufficient as one account can be used for a huge number of Team Projects.
+* A Team Project is created within a VSTS Account and is used to wrap all kind of artifacts which somehow are related - e.g. for development of a single software solution. Sharing artifacts across Team Projects is limited. 
+* A Team Project can host an unlimited number of Source Code repositories, work items for work planning, build and release definitions etc. 
+* A Team Project can host several teams - a number of persons working on a specific set of tasks. It is possible to put a single person into mutlipe teams.
+* A Team Project is always based on a process template - a definition of what working in this Team Project looks like. A process templates defines e.g. whether a "bug" is called "bug", "issue" or "defect" and which states it can take.
+* Ideally a Team Project is connected with Azure Active Directory which eases user management.
+* VSTS is not limited in the kind of applications you want to create - it works with any kind of source code, can trigger builds and deployments from and to Linux, Windows and Mac OS (and others) and supports working with containers and all kinds of clouds.
  
-
 ## Achievements ##
 | # | Achievement   | Maximum score |
 |-|-|-|
 |1.| Create a Microsoft Account on https://signup.live.com/| 3 |
 |2.| Create a Free Microsoft Azure Account on https://azure.microsoft.com/de-de/free/| 3 |
 |3.| Create a VSTS account on http://visualstudio.com| 3 |
+|5.| Give your colleagues access to your account and an appropriate security level| 5 |
+
+# DevOps Challenge \#1 - VSTS Team Project Setup #
+| # | Achievement   | Maximum score |
+|-|-|-|
 |4.| Create a Team Project called RedBlueTeamProject within your VSTS account| 3 |
-|5.| Give your colleagues access to your account | 5 |
-|6.| Give your team members an appropriate security level | 5 |
-|7.| Invite users to your new Team Project | 5 |
 |8.| Create a team named "Team Blue" within your Team Project and invite your colleagues | 5 |
 
 ## Bonus Goals ##
@@ -20,44 +31,21 @@ In this challenge you will create a VSTS account, invite users, set up a project
 |-|-|-|
 |1.| Create another team named "Team Red" within your Team Project and invite some colleagues |10|
 
-# DevOps Challenge \#2 - Work Management and process customization #
-In this challenge, you will configure VSTS to trace and plan your work.
-If you need help check out the [Process Customization Hints](/ProcessCustomization/ProcessCustomization.md) and [WorkItem Management Hints](/WorkItemManagement/WorkManagement.md) plus the [Dashboard customization Hints](/Dashboard/Dashboard.md).
-## Achievements ##
-| # | Achievement   | Maximum score |
-|-|-|-|
-|1.| Create a custom process template called "RedBlueAgileTemplate" based on agile template | 10 |
-|2.|Create new Portfolio Backlog Levels "Scenario" and "Vision" |10|
-|3.| Create a new Work Item Type "Scenario" and make it the default WorkItem for the Backlog Level "Scenario" do the same for "Vision". | 10 |
-|4.| Modify your team project to inherit from this template. | 10 |
-|5.| Customize your board to display items which are done in green + also display Epics |10|
-|5.1| Create a style rule to display Items which have not been moved for 7 days in red | 10 |
-|6.| Create sample work items with releationships (e.g. parent/child). Create them in a hierarchical manner. Start at Feature / Epic level or higher and build up the whole tree down to Task level. | 10 |
-|7.| Link work items, view history | 10 |
-|8.| Modify dashboard to show Reports & Stats (Come back to this after completing challenges 4, 5 and 6 to finish this Goal)  | 10 |
-|9.| Modify dashboard to show team members, your current workitems, nr of bugs | 10 |
 
 
-## Bonus Goals ##
-| # | Bonus Goal   | Maximum score |
-|-|-|-|
-|1.| Add a few styling rules to your board highlighting important Items ( e.g. Bugs or Items with a special Tag)| 10 |
-|2.| Add a custom state Testing in your Work Item| 10 |
-|3.| Add a custom field 'Coffee consumed in liters' on your work item | 10 |
-|4.| Modify your work view  to display the new hierarchy level|10|
-|5.| Customize your board to display Id, owner and the value of your new custom field|10|
-
-
-# DevOps Challenge \#3 - Version Control #
+# DevOps Challenge \#2 - Version Control #
 In this challenge, you will set up version control, upload code and configure policies.
 If you need help check out the [Version Control Hints](/VersionControl/VersionControl.md).
+## What you get ##
+You probably are alread working with Version Control today. Maybe you're using Git already - but maybe it's hosted in GitLab, GitHub, Bitbucket or in another system. These existing external systems could be integrated, however VSTS supports working with Git directly as well. After this challenge you'll have set up a Git repository in VSTS which can be accessed from Git clients (e.g. git.exe). You'll also learn how to create some policies around Git in VSTS and enforce the pull request workflow.
+
 ## Achievements ##
 | # | Achievement   | Maximum score |
 |-|-|-|
 |1.| Create a new Git repository in your Team Project| 10 |
 |2.| Import our sample repository found [here   (https://github.com/DanielMeixner/DevOpsHackSample)](https://github.com/DanielMeixner/DevOpsHackSample) to your new VSTS Repository | 10 |
 |3.| Modify your repo to require a pull request to merge code into your master branch  | 10 |
-|4.|Modify your repo to require a Work Item linked to a pull request |10|
+|4.| Modify your repo to require a Work Item linked to a pull request |10|
 |5.| Configure your repo to require at least one of your colleagues as approver  | 10 |
 |6.| Create a new Branch. Check it out and modify code locally changing the displayed Name of the Demo Website. Commit the change, then initiate and complete a pull request. Link a work item and follow the review process. | 10 |
 
@@ -73,19 +61,22 @@ If you need help check out the [Version Control Hints](/VersionControl/VersionCo
 
 
 
-# DevOps Challenge \#4 - Build Configuration for CI #
+# DevOps Challenge \#3 - Build Configuration for CI #
 In this challenge, you will set up a build definition for your project and configure it for continuous integration. 
 If you need help check out the [Build Configuration Hints](/BuildConfiguration/BuildConfiguration.md).
+## What you get ##
+After this challenge you'll have a system set up where you can trigger a new build with every code change on a specific branch. This is the first step towards a full Continuous Integration / Continuous Deployment (CI/CD) pipeline. You'll learn how to modify build definitions, how to set triggers and how to add tasks which gives you a basic understanding of configuration options for VSTS. If you're working with CI already you might have set up a similar definition already in another tool like Jenkins or Bamboo. While it's always possible to trigger external systems or to integrate steps to activate e.g. Jenkins, in this challenge you'll set up a definition for usage of cloud builds orchestrated via VSTS.
+
 ## Achievements ##
 | # | Achievement   | Maximum score |
 |-|-|-|
 |1| Create a new build definition "CI Build" | 10 |
 |1| Configure your build definition to build the ASP.NET Core website. Choose *Hosted VS 2017* as agent or add make sure your agent has the correct .NET SDK installed. (2.0.0 should work!) | 10 |
 |1| Modify your build definiton for CI - so set the trigger to build with every new push to the master branch| 10 |
-|1| Clone your build definition, call the clone "PR Build" and set the trigger to Pull Request (Branch Policies) | 10 |
-|1| Modify your source code locally, push the code, trigger a PR and follow the Pipeline | 10 |
-|1| Add a Build Step to Copy the ARM-Templates to make them accessible for the release definitions. Use "Publish Build Artifacts" task.| 10 |
-|1| Add a Build Step to copy the required test files. See hint file for details. |10|
+|1| Clone your build definition, call the clone "PR Build" and set the trigger to Pull Request (see Branch Policies) | 10 |
+|1| Modify your source code locally, push the code, trigger a PR and follow the Pipeline in the UI. You will be able to see the build output realtime-like. | 10 |
+|1| Add another Build Task to copy the ARM-Templates to make them accessible for the release definitions. Use "Publish Build Artifacts" task.| 10 |
+
 
 ## Bonus Goals ##
 | # | Bonus Goal | Maximum score |
@@ -95,8 +86,11 @@ If you need help check out the [Build Configuration Hints](/BuildConfiguration/B
 
 
 
-# DevOps Challenge \#5 - Release Management #
+# DevOps Challenge \#4 - Release Management #
 In this challenge, you will release your application to Azure. If you need help check out the [Release Management Hints](/ReleaseManagement/ReleaseManagement.md).
+## What you get ##
+After this challenge you'll be able to deploy the sample application to an environment hosted in the cloud automatically. You'll be able to target different environments based on a single configuration so that you avoid inconsistencies between dev, test and production environments. You'll be using "infrastructure as code" approaches to specify the required infrastructure - in this case you'll be using ARM (Azure Resource Manager) templates. Maybe you have a similar system running today which might be based on e.g. Chef, Puppet, Octopus. While - again - it's possible to integrate those tools this challenge will help you learn about the integrated automation in VSTS. 
+
 ## Achievements ##
 | # | Achievement   | Maximum score |
 |-|-|-|
@@ -104,6 +98,7 @@ In this challenge, you will release your application to Azure. If you need help 
 |1| Add a task to deploy the required infrastructure on Azure. Use the ARM Template provided  in /env/Templates/FullEnvironmentSetupMerged.json and also use the provided parameters file in the same folder. Overwrite the parameters as required. Make sure you're using globally unique values by e.g. adding a random string at the end. Otherwise you might run into collisions.  (See hints.)  | 10 |
 |1| Modify your release definition to deploy your application. Use task "Azure Deploy App Service". Use your the name of your website as App Service Name. Pick to deploy to slot "Dev". *Hint: You can use variables for the values provided. Typically you'd work with values provided by a dropdown list. In our case those values might not exisit yet, so we have to provide them manually.*| 10 |
 |1| Modify your code locally, push the code and watch the pipeline. | 10 |
+|1| After a successful release investigate the information in the release's overview - see how you can navigate between releases, corresponding builds, source code artifacts, pull request and related work items via linked items. | 10 |
 |1| Create another release environment which deploys to another deployment slot. | 10 |
 
 ## Bonus Goals ##
@@ -112,66 +107,65 @@ In this challenge, you will release your application to Azure. If you need help 
 |1|Add a 3rd deployment slot called "Test" by modifiying your ARM template accordingly.|50|
 
 
-# DevOps Challenge #6 - Automated Testing #
+
+# DevOps Challenge \#5 - Work Management and process customization #
+In this challenge, you will configure VSTS to trace and plan your work.
+If you need help check out the [Process Customization Hints](/ProcessCustomization/ProcessCustomization.md) and [WorkItem Management Hints](/WorkItemManagement/WorkManagement.md) plus the [Dashboard customization Hints](/Dashboard/Dashboard.md).
+## What you get ##
+VSTS brings Work Management in a default way and very often it is not necessary to do customization. After this challenge you will have learned about how to customize some areas of work management in VSTS. You'll be creating a new process template which could be shared across projects. This new templates will include new hierachy levels of work. You'll also modify some of the display options of work and learn about linkning work items and using the dashboard.
+## Achievements ##
+| # | Achievement   | Maximum score |
+|-|-|-|
+|1.| Create a custom process template called "RedBlueAgileTemplate" based on agile template | 10 |
+|2.| Create new Portfolio Backlog Levels "Scenario" and "Vision" |10|
+|3.| Create a new Work Item Type "Scenario" and make it the default WorkItem for the Backlog Level "Scenario" do the same for "Vision". | 10 |
+|4.| Modify your team project to inherit from this template. | 10 |
+|5.| Customize your board to display items which are done in green + also display Epics |10|
+|5.1| Create a style rule to display Items which have not been moved for 7 days in red | 10 |
+|6.| Create sample work items with releationships (e.g. parent/child). Create them in a hierarchical manner. Start at Feature / Epic level or higher and build up the whole tree down to Task level. | 10 |
+|7.| Link work items, view history | 10 |
+|8.| Modify dashboard to show Reports & Stats  | 10 |
+|9.| Modify dashboard to show team members, your current workitems, nr of bugs | 10 |
+
+## Bonus Goals ##
+| # | Bonus Goal   | Maximum score |
+|-|-|-|
+|1.| Add a few styling rules to your board highlighting important Items ( e.g. Bugs or Items with a special Tag)| 10 |
+|2.| Add a custom state Testing in your Work Item| 10 |
+|3.| Add a custom field 'Coffee consumed in liters' on your work item | 10 |
+|4.| Modify your work view  to display the new hierarchy level|10|
+|5.| Customize your board to display Id, owner and the value of your new custom field|10|
+
+
+# CONGRATULATIONS #
+Congrats! You've passed the essential challenges. Now take a step back, relax and explore: VSTS automatically combines all the information you provide - see if you can find an easy way to figure out which features have been implemented newly in your latest release compared to the release 2 releases ago?
+
+Take your time to explore VSTS and all the other options available - whether it's Wiki or the Test Hub. If you have some time left, here are even more challenges.
+
+
+# DevOps Bonus Challenge #6 - Automated Testing #
 In this challenge, you will integrate automated tests into your application.
 If you need help check out the [Auto Test Hints](/AutoTest/AutoTest.md).
+## What you get ##
+After this challenge you'll be running a test on your newly deployed application whenever it's been updated.
 ## Achievements ##
 | # | Achievement   | Maximum score |
 |-|-|-|
 |1|  Create an automated performance test for the start page of your website which will be executed after deploying to environment "Dev". Configure it to simulate 100 users over 2 minutes. Configure it to fail if response times are larger then 5 seconds. *Hint: There's a task which will help you.*| 10 |
-|1|  Create a (multi-step) cloud based load test for your website which will be executed after release to test environment.Use the loadtest provided. | 10 |
-
 
 ## Bonus Goals ##
 | # | Bonus Goal   | Maximum score |
 |-|-|-|
+|1| Create a (multi-step) cloud based load test for your website which will be executed after release to test environment.Use the loadtest provided. | 10 |
 |1| Visual Studio users only: Use VS to record a new webtest and use it during release. | 10 |
 
-# DevOps Challenge #7 - Application Monitoring #
-In this challenge, you will set up monitoring for your application in Azure.
-If you need help check out the [Application Monitoring Hints](/ApplicationMonitoring/ApplicationMonitoring.md).
-## Achievements ##
-| # | Achievement   | Maximum score |
-|-|-|-|
-|1| **Understanding Application Insights**: Find the Application Insights (AI) component(s) for your app in Azure portal. Search for the different instances of AI for your slots. Check the default charts and take a look at how to create own charts. Search for the Application ID and the instrumentation key which "wire up" your application with correspondig telemetry services. Try to understand how the wiring works under the hood for the different slots. | 30 |
-|1| **Deployment Markers:** You want to be able to see application releases in your AI charts. Add Release Annotations by adding a new task in your release definition for every environment. 
-|-| What could you do to avoid doing modifications like this for every environment?||
-|-| What is the problem with specifying an AppID in the task? How could you solve this problem? (You don't have to solve it, but think about how to solve it.) | 30 |
-|1| **Custom Server Telemetry:** Collect a custom telemetry event in your webpage for whenever someone triggers a product search. Collect the time it takes to run the search. *Hint: ApplicationInsights is already pre-wired. All you have to do ist specify the line of code in SearchController.cs. You can check the OrdersController.cs file which is already tracing for code snippets. See hint file for details.* | 50 |
-|1| **Custom Client Telemetry:**  Instrument your client Web Pages. Add a code snippet to track usage of the carousel found on the home page. Being responsible for the website you might want to know: Are customers actually using the option to flip through offerings? *Hint: Application Insights is already pre-wired. All you have to do is to specify the logging with a small Java Script snippet. You can check **/Views/ShoppingCart/Index.cshtml** for an analog procedure or check the hints file.* | 50 |
-|1| **View AI logs & analytics:** Now re-deploy your application and use it to see if data is being logged. View the Azure portal to find the logs in the correspoding AI component. You don't have to deploy to every slot for this exercise. In your AI portal check the analytics button to run some SQL-like queries.   | 20 |
-|1| **Custom Charts** Create charts in the metrics explorer to display your new metrics. |10| 
-|1| **Availability Test:** Add an Availability test in Azure Portal from 5 locations in a 5 min frequency with dependencies; Match content for a string found in your startpage. Set alerts to send you an email. Provoke an error.| 20 |
-|1| **Work Item Creation:** Find the place to create a work item from AI in Azure Portal. Configure the settings to create a Work Item in your VSTS project. | 10 |
-|1| **Dashboard** Adjust your VSTS dashboard to show AI metrics. | 10 |
-
-## Bonus Goals ##
-| # | Bonus Goal   | Maximum score |
-|-|-|-|
-|1| Solve the problem with the specified AppId in the Release Annotation task. | 100 |
 
 
-# DevOps Challenge 8 - Containers #
-In this challenge, you will create a pipeline for container deployment. If you need help check out the [Container Hints](/Containers/Containers.md). If you don't want to wait so long for the build to complete you can use this Project instead https://github.com/tclasenOrange/DevOpsHackSimpleProject. You can then deploy a "WebApp for Containers" and deploy your Container to it. Also you can then easily setup CD through the Azure Portal if your Azure Container Registry supports Web Hooks.
-## Achievements ##
-| # | Achievement   | Maximum score |
-|-|-|-|
-|1| "Dockerize your application" by creating a Dockerfile for it. You don't have to have Docker installed to create a Dockerfile. In doubt, check the hints file. | 10 |
-|1| In Azure Portal create an Azure Container Registry.|10|
-|1| Create a new build definition in VSTS for your application which creates a container image.| 10 |
-|1| Extend your pipeline to automatically deploy your image into your container registry. |10|
-|1| If you have Docker installed, run the image locally and pull it from your Azure Registry. |10|
-|1| Running a container locally is rather boring. Run your container image as an Azure Container Instance manually on a managed container platform. |10||1| Create a release pipeline which deploys your container to Azure Container Instances.|10|
 
-# DevOps Challenge 9 - Start in the cloud #
-In this challenge you will set up an end to end devops pipeline starting in the Azure Portal. Azure Portal can do a lot of the steps we did so far on it's own. 
-If you need help check out the [Azure Portal Deployment Hints](/StartInTheCloud/StartInTheCloud.md).
-## Achievements ##
-| # | Achievement   | Maximum score |
-|-|-|-|
-|1| In Azure Portal create a new Azure Web App.| 10 |
-|1| Connect it to VSTS and configure it to configure a pipeline for you.| 10 |
-|1| Investigate the pipeline and trigger a release. | 10 |
+
+
+
+
 
 
 

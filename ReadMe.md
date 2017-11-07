@@ -1,13 +1,14 @@
-# DevOps Hack 2017 - Guidance
-This content is intended to be used for an instructor led lab, and will be delivered during the [2017 DevOps Hackathon Roadshow](http://aka.ms/msdevopshack) provided by Microsoft and Orange Networks.
+# DevOps Hack Essentials 2017 - Guidance
+This content is intended to be used for a led lab provided by Microsoft or partners of Microsoft.
 
 The intent is to provide a hands-on experience with Microsoft's DevOps tooling (mostly VSTS and Azure). Most challenges are operating system agnostic, and will be performed with a browser or Git.
 
-Be warned: The format is not a step by step recipie - you will be required to think!
+Be warned: The format is not a step by step recipie - you will be required to think and depending on your current skill set it will be challening!
 
 You can find a bunch of challenges in [this][1] document.
 
-This is how it works:
+Here'show it works:
+1. Find a bunch of colleagues to build a team and work together. (Ideally you form a team of 2-5 people.)
 1. Go read the [challenges document][1].
 1. Tackle the challenges one by one.
 1. If you need help, check the hints documents linked in the challenges docs. You will find screenshots and information there to guide you.
