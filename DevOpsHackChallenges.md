@@ -63,7 +63,7 @@ You probably are alread working with Version Control today. Maybe you're using G
 
 # DevOps Challenge \#3 - Build Configuration for CI #
 In this challenge, you will set up a build definition for your project and configure it for continuous integration. 
-If you need help check out the [Build Configuration Hints](/BuildConfiguration/BuildConfiguration.md).
+If you need help check out the [:blue_book: Build Configuration Hints](/BuildConfiguration/BuildConfiguration.md).
 ## What you get ##
 After this challenge you'll have a system set up where you can trigger a new build with every code change on a specific branch. This is the first step towards a full Continuous Integration / Continuous Deployment (CI/CD) pipeline. You'll learn how to modify build definitions, how to set triggers and how to add tasks which gives you a basic understanding of configuration options for VSTS. If you're working with CI already you might have set up a similar definition already in another tool like Jenkins or Bamboo. While it's always possible to trigger external systems or to integrate steps to activate e.g. Jenkins, in this challenge you'll set up a definition for usage of cloud builds orchestrated via VSTS.
 
@@ -87,7 +87,7 @@ After this challenge you'll have a system set up where you can trigger a new bui
 
 
 # DevOps Challenge \#4 - Release Management #
-In this challenge, you will release your application to Azure. If you need help check out the [Release Management Hints](/ReleaseManagement/ReleaseManagement.md).
+In this challenge, you will release your application to Azure. If you need help check out the [:blue_book: Release Management Hints](/ReleaseManagement/ReleaseManagement.md).
 ## What you get ##
 After this challenge you'll be able to deploy the sample application to an environment hosted in the cloud automatically. You'll be able to target different environments based on a single configuration so that you avoid inconsistencies between dev, test and production environments. You'll be using "infrastructure as code" approaches to specify the required infrastructure - in this case you'll be using ARM (Azure Resource Manager) templates. Maybe you have a similar system running today which might be based on e.g. Chef, Puppet, Octopus. While - again - it's possible to integrate those tools this challenge will help you learn about the integrated automation in VSTS. 
 
@@ -110,7 +110,7 @@ After this challenge you'll be able to deploy the sample application to an envir
 
 # DevOps Challenge \#5 - Work Management and process customization #
 In this challenge, you will configure VSTS to trace and plan your work.
-If you need help check out the [Process Customization Hints](/ProcessCustomization/ProcessCustomization.md) and [WorkItem Management Hints](/WorkItemManagement/WorkManagement.md) plus the [Dashboard customization Hints](/Dashboard/Dashboard.md).
+If you need help check out the [:blue_book: Process Customization Hints](/ProcessCustomization/ProcessCustomization.md) and [:blue_book: WorkItem Management Hints](/WorkItemManagement/WorkManagement.md) plus the [:blue_book: Dashboard customization Hints](/Dashboard/Dashboard.md).
 ## What you get ##
 VSTS brings Work Management in a default way and very often it is not necessary to do customization. After this challenge you will have learned about how to customize some areas of work management in VSTS. You'll be creating a new process template which could be shared across projects. This new templates will include new hierachy levels of work. You'll also modify some of the display options of work and learn about linkning work items and using the dashboard.
 ## Achievements ##
@@ -133,8 +133,7 @@ VSTS brings Work Management in a default way and very often it is not necessary 
 |1.| Add a few styling rules to your board highlighting important Items ( e.g. Bugs or Items with a special Tag)| 10 |
 |2.| Add a custom state Testing in your Work Item| 10 |
 |3.| Add a custom field 'Coffee consumed in liters' on your work item | 10 |
-|4.| Modify your work view  to display the new hierarchy level|10|
-|5.| Customize your board to display Id, owner and the value of your new custom field|10|
+|4.| Customize your board to display Id, owner and the value of your new custom field|10|
 
 
 # CONGRATULATIONS #
@@ -145,7 +144,7 @@ Take your time to explore VSTS and all the other options available - whether it'
 
 # DevOps Bonus Challenge #6 - Automated Testing #
 In this challenge, you will integrate automated tests into your application.
-If you need help check out the [Auto Test Hints](/AutoTest/AutoTest.md).
+If you need help check out the [:blue_book: Auto Test Hints](/AutoTest/AutoTest.md).
 ## What you get ##
 After this challenge you'll be running a test on your newly deployed application whenever it's been updated.
 ## Achievements ##
