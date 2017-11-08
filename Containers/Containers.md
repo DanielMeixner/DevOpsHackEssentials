@@ -36,6 +36,7 @@ If you run this locally it will start up your website in your container.
 ## Create a build definition to create a container
 1. Choose Hosted Linux agents as build agents.
 1. They might need an updated version of Dotnet SDK. You can find a build task to update the SDK on the agent. Choose Version 2.0.0.
+
 ![Update SDK](images/ContainersDotNetSdk.jpg)
 1. Run *dotnet restore* and *dotnet publish* on the agent.
 * Point "dotnet publish" to your website project located in src/PartsUnlimitedWebsite/PartsUnlimitedWebsite.csproj
@@ -43,8 +44,10 @@ If you run this locally it will start up your website in your container.
 ![DotNet Restore](images/ContainersDotNetRestore.jpg)
 1. Use the Docker tasks to build an image. 
 * For the imagename select a name in lowercase letters only!
+
 ![Build Container Image](images/ContainersBuildImage.jpg)
 1. Use the Docker tasks to publish the image.
+
 ![Push Container Image](images/ContainersPushImage.jpg)
 
 
@@ -76,6 +79,15 @@ az container show --name YOURCONTAINERNAME --resource-group YOURRESOURCEGROUP
 
 ## Depoy to ACI from VSTS
 1. Create a new Release Definition
+1. Add a task "Azure CLI". Add two lines of inline script like this (replace parameters as required)
+```
+az group create --name tmpMyRg$(Build.BuildId) --location eastus
+az container create --name mycontainer --image <yourAzureContainerRegistry>.microsoft.azurecr.io/<yourImageNaem>:$(Build.BuildId) --resource-group tmpMyRg$(Build.BuildId) --ip-address public
+```
+1. Connect the release pipeline to a build definition (input artifact). 
+
+**Hint:** You can run this once per build, otherwise you'll run into name collisions as you can't run multiple container instances with the same names in the same resource group. This is just a sample. But think about it - how could you solve this problem?
+
 1. Add a new task to your release and to run a powershell script. Run the command as specified previously and also run "az login" before as described [here](../ApplicationMonitoring/ApplicationMonitoring.md).
 
 

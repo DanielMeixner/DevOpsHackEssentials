@@ -160,7 +160,18 @@ After this challenge you'll be running a test on your newly deployed application
 
 
 
+# DevOps Superbonus Challenge 7 - Containers #
+In this challenge, you will create a pipeline for container deployment. If you need help check out the [:blue_book: Container Hints](/Containers/Containers.md). 
 
+## Achievements ##
+| # | Achievement   | Maximum score |
+|-|-|-|
+|1| "Dockerize your application" by creating a Dockerfile for it. You don't have to have Docker installed to create a Dockerfile. In doubt, check the hints file. | 10 |
+|1| In Azure Portal create an Azure Container Registry.|10|
+|1| Create a new build definition in VSTS for your application which creates a container image.| 10 |
+|1| Extend your pipeline to automatically deploy your image into your container registry. |10|
+|1| If you have Docker installed, run the image locally and pull it from your Azure Registry. |10|
+|1| Running a container locally is rather boring. Run your container image as an Azure Container Instance manually on a managed container platform. |10||1| Create a release pipeline which deploys your container to Azure Container Instances.|10|
 
 
 
