@@ -1,5 +1,5 @@
 # DevOps Challenge \#0 - VSTS Account Setup #
-In this challenge you will create a VSTS account, invite users, set up a project and create a team with your colleagues. If you need help check out the [hints for this challenge](/FirstSteps/FirstSteps.md).
+In this challenge you will create a VSTS account, invite users, set up a project and create a team with your colleagues. If you need help check out the [:blue_book: hints for this challenge](/FirstSteps/FirstSteps.md).
 If a VSTS account and an Azure account has already been set up for you, skip the corresponding steps.
 
 ## What is VSTS? ##
@@ -35,7 +35,7 @@ Think of VSTS as an integrated solution to support you throughout development an
 
 # DevOps Challenge \#2 - Version Control #
 In this challenge, you will set up version control, upload code and configure policies.
-If you need help check out the [Version Control Hints](/VersionControl/VersionControl.md).
+If you need help check out the [:blue_book: Version Control Hints](/VersionControl/VersionControl.md).
 ## What you get ##
 You probably are alread working with Version Control today. Maybe you're using Git already - but maybe it's hosted in GitLab, GitHub, Bitbucket or in another system. These existing external systems could be integrated, however VSTS supports working with Git directly as well. After this challenge you'll have set up a Git repository in VSTS which can be accessed from Git clients (e.g. git.exe). You'll also learn how to create some policies around Git in VSTS and enforce the pull request workflow.
 
