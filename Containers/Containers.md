@@ -38,8 +38,11 @@ If you run this locally it will start up your website in your container.
 1. They might need an updated version of Dotnet SDK. You can find a build task to update the SDK on the agent. Choose Version 2.0.0.
 ![Update SDK](images/ContainersDotNetSdk.jpg)
 1. Run *dotnet restore* and *dotnet publish* on the agent.
+* Point "dotnet publish" to your website project located in src/PartsUnlimitedWebsite/PartsUnlimitedWebsite.csproj
+
 ![DotNet Restore](images/ContainersDotNetRestore.jpg)
 1. Use the Docker tasks to build an image. 
+* For the imagename select a name in lowercase letters only!
 ![Build Container Image](images/ContainersBuildImage.jpg)
 1. Use the Docker tasks to publish the image.
 ![Push Container Image](images/ContainersPushImage.jpg)
