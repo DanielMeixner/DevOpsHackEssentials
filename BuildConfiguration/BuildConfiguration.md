@@ -16,13 +16,11 @@ This is on purpose: We want you to explore and play with the different options o
 ## Add Build Tasks to publish Artifacts
 ![Artifacts](/BuildConfiguration/images/buildconfigArtifacts.jpg)
 
-## Add build task to publich testfiles
-![Testfiles](/BuildConfiguration/images/buildconfigTestSettings.jpg)
+## Add build task to publish Arm Templates
+* Use the "Publish Artifacts" Task
+* Pick the folder "env/templates" as "Path to publish"
+* Use e.g. "ArmTemplates" as "Artifact Name".
 
-
-## Configure Build Triggers, add Unittests
-TODO: The unit test part in this screenshot is not correct.
-![Build definition config](/BuildConfiguration/images/buildconfig1.jpg)
 
 ## Create a private Build Agent for VSTS
 ![Configure private agent](/BuildConfiguration/images/buildconfig2.jpg)
