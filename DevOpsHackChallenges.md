@@ -71,7 +71,7 @@ After this challenge you'll have a system set up where you can trigger a new bui
 | # | Achievement   | Maximum score |
 |-|-|-|
 |1| Create a new build definition "CI Build" | 10 |
-|1| Configure your build definition to build the ASP.NET Core website. Choose *Hosted VS 2017* as agent or add make sure your agent has the correct .NET SDK installed. (2.0.0 should work!) | 10 |
+|1| Configure your build definition to build the ASP.NET Core website. Choose *Hosted Linux Preview* as agent or add make sure your agent has the correct .NET SDK installed. (2.0.0 should work!) | 10 |
 |1| Modify your build definiton for CI - so set the trigger to build with every new push to the master branch| 10 |
 |1| Clone your build definition, call the clone "PR Build" and set the trigger to Pull Request (see Branch Policies) | 10 |
 |1| Modify your source code locally, push the code, trigger a PR and follow the Pipeline in the UI. You will be able to see the build output realtime-like. | 10 |
